@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Błąd 404 | Nie znaleziono strony</title>
+    <style>
+        /* [Pomijamy pelne style dla czytelnosci, uzywamy twojej palety] */
+        :root {
+            --c-bg-base: #020202; 
+            --c-text-main: #e0e0e0;
+            --c-amber: #FFB000; 
+            --c-dark-orange: #CC5500; 
+            --shadow-amber: 0 0 25px rgba(255, 176, 0, 0.4);
+        }
+
+        body {
+            background-color: var(--c-bg-base);
+            color: var(--c-text-main);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: rgba(15, 15, 15, 0.9);
+            border-radius: 10px;
+            border: 1px solid var(--c-amber);
+            box-shadow: var(--shadow-amber);
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: var(--c-dark-orange);
+            margin: 0;
+            text-shadow: 0 0 10px var(--c-dark-orange);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--c-amber);
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: var(--c-amber);
+            color: #000; 
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: var(--c-dark-orange); 
+            color: #fff; 
+            box-shadow: 0 0 15px var(--c-dark-orange);
+        }
+
+        .icon-404 {
+            font-size: 3rem;
+            color: var(--c-amber);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-404">🐝</div> 
+        <h1>404</h1>
+        <h2>Ups! Nie znaleziono tej podstrony.</h2>
+        <p>
+            Strona, której szukasz, mogła zostać przeniesiona lub nigdy nie istniała. 
+            Wygląda na to, że zbłądziłeś/aś.
+        </p>
+        <a href="index.html" class="home-button">
+            POWRÓT NA STRONĘ GŁÓWNĄ
+        </a>
+    </div>
+</body>
+</html>
