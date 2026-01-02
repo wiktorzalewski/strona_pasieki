@@ -13,7 +13,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
-        /* --- STYLE SPECYFICZNE DLA POGOTOWIA --- */
         
         .rescue-layout {
             display: grid;
@@ -21,10 +20,9 @@
             gap: 40px;
         }
 
-        /* Sekcja Alarmowa (Główna) */
         .emergency-card {
             background: #1a1a1a;
-            border: 2px solid var(--c-orange, #e67e22); /* Pomarańczowa ramka ostrzegawcza */
+            border: 2px solid var(--c-orange, #e67e22);
             border-radius: 15px;
             padding: 40px;
             text-align: center;
@@ -33,7 +31,6 @@
             overflow: hidden;
         }
 
-        /* Pasek ostrzegawczy na górze karty */
         .emergency-card::before {
             content: "";
             position: absolute;
@@ -63,7 +60,6 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Przycisk Zadzwoń (Pulsujący) */
         .btn-call {
             display: inline-block;
             background-color: var(--c-orange, #e67e22);
@@ -90,7 +86,6 @@
             100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
         }
 
-        /* Lista usług */
         .services-list {
             margin: 30px 0;
             text-align: left;
@@ -108,7 +103,6 @@
             margin-right: 10px;
         }
 
-        /* Sekcja Wsparcia i Bezpieczeństwa (Grid 2 kolumny na PC) */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -163,7 +157,6 @@
             color: #000;
         }
 
-        /* Responsywność */
         @media (max-width: 768px) {
             .info-grid {
                 grid-template-columns: 1fr;
@@ -177,7 +170,7 @@
             .btn-call {
                 font-size: 1.2rem;
                 padding: 12px 30px;
-                width: 100%; /* Pełna szerokość na telefonie */
+                width: 100%;
                 box-sizing: border-box;
             }
         }
@@ -322,7 +315,7 @@
         </div>
 
         <div class="footer-bottom" style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.85rem; color:#666;">
-            © 2025 Pasieka Pod Gruszką. Website designer & developer: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature" style="color:#fff; text-decoration:none; font-weight:bold; margin-left:5px;">Wiktor Zalewski</a>
             <p> Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com </p>
         

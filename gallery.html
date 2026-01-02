@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- STYLIZACJA SIATKI GALERII --- */
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -26,13 +25,13 @@
             border-radius: 10px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            aspect-ratio: 4/3; /* Utrzymuje prostokątny kształt kafelków */
+            aspect-ratio: 4/3;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(255, 193, 7, 0.3); /* Poświata w kolorze miodu */
+            box-shadow: 0 10px 15px rgba(255, 193, 7, 0.3);
         }
 
         .gallery-item img {
@@ -43,10 +42,9 @@
         }
 
         .gallery-item:hover img {
-            transform: scale(1.1); /* Delikatne przybliżenie przy najechaniu */
+            transform: scale(1.1);
         }
 
-        /* Ikona lupy przy najechaniu */
         .gallery-overlay {
             position: absolute;
             top: 0;
@@ -70,7 +68,6 @@
             color: #fff;
         }
 
-        /* --- LIGHTBOX (MODAL DO PRZEGLĄDANIA) --- */
         .lightbox {
             display: none;
             position: fixed;
@@ -105,7 +102,6 @@
             margin: auto;
         }
 
-        /* Przyciski nawigacji */
         .lb-btn {
             position: absolute;
             top: 50%;
@@ -148,7 +144,6 @@
             color: var(--c-gold, #ffc107);
         }
 
-        /* Licznik zdjęć */
         .lb-counter {
             position: absolute;
             bottom: 20px;
@@ -161,7 +156,6 @@
             border-radius: 20px;
         }
 
-        /* Ukrywanie strzałek na bardzo małych ekranach */
         @media (max-width: 500px) {
             .lb-prev, .lb-next {
                 width: 40px;
@@ -282,7 +276,7 @@
     </div>
 
         <div class="footer-bottom" style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.85rem; color:#666;">
-            © 2025 Pasieka Pod Gruszką. Website designer & developer: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature" style="color:#fff; text-decoration:none; font-weight:bold; margin-left:5px;">Wiktor Zalewski</a>
             <p> Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com </p>
         
@@ -298,9 +292,9 @@
 
     <script>
 
-        const totalImages = 3; // <-- Zmień tę liczbę, gdy dodasz nowe zdjęcia!
+        const totalImages = 3; //Liczba do zmianty gdy dodaje nowe zdjecia
         const imagePath = 'assets/images/gallery/';
-        const imageExtension = '.jpg'; // Upewnij się, że zdjęcia to .jpg (małe litery)
+        const imageExtension = '.jpg';
 
         let currentImageIndex = 1;
 
@@ -310,32 +304,27 @@
             for (let i = 1; i <= totalImages; i++) {
                 const item = document.createElement('div');
                 item.className = 'gallery-item';
-                item.onclick = () => openLightbox(i); // Kliknięcie otwiera konkretne zdjęcie
+                item.onclick = () => openLightbox(i);
 
-                // Tworzenie obrazka
                 const img = document.createElement('img');
                 img.src = `${imagePath}${i}${imageExtension}`;
                 img.alt = `Zdjęcie z pasieki nr ${i}`;
-                img.loading = "lazy"; // Optymalizacja ładowania
-                
-                // Obsługa błędu (np. gdy zapomnisz wgrać plik "5.jpg")
+                img.loading = "lazy";
+
                 img.onerror = function() {
-                    this.parentElement.style.display = 'none'; // Ukryj kafelek jeśli brak zdjęcia
+                    this.parentElement.style.display = 'none';
                 };
 
-                // Nakładka z lupą
                 const overlay = document.createElement('div');
                 overlay.className = 'gallery-overlay';
                 overlay.innerHTML = '<i class="fas fa-search-plus"></i>';
 
-                // Składanie całości
                 item.appendChild(img);
                 item.appendChild(overlay);
                 galleryGrid.appendChild(item);
             }
         });
 
-        // --- FUNKCJE LIGHTBOXA ---
 
         function openLightbox(index) {
             const lightbox = document.getElementById('lightbox');
@@ -348,8 +337,7 @@
             setTimeout(() => {
                 lightbox.classList.add('active');
             }, 10);
-            
-            // Zablokuj przewijanie strony pod spodem
+
             document.body.style.overflow = 'hidden';
         }
 
@@ -359,7 +347,7 @@
             
             setTimeout(() => {
                 lightbox.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Odblokuj przewijanie
+                document.body.style.overflow = 'auto';
             }, 300);
         }
 
@@ -379,8 +367,7 @@
         function updateLightboxImage() {
             const lbImg = document.getElementById('lb-image');
             const counter = document.getElementById('lb-counter');
-            
-            // Efekt zanikania przy zmianie
+
             lbImg.style.opacity = 0;
             
             setTimeout(() => {
@@ -390,7 +377,6 @@
             }, 150);
         }
 
-        // --- OBSŁUGA KLAWIATURY I KLIKNIĘĆ W TŁO ---
         
         window.addEventListener('keydown', (e) => {
             const lightbox = document.getElementById('lightbox');
@@ -401,7 +387,6 @@
             }
         });
 
-        // Zamknięcie po kliknięciu w czarne tło (ale nie w zdjęcie)
         document.getElementById('lightbox').addEventListener('click', (e) => {
             if (e.target.id === 'lightbox') {
                 closeLightbox();

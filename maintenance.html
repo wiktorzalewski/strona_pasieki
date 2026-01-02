@@ -20,7 +20,6 @@
 
         body {
             background-color: var(--c-bg);
-            /* Nowoczesne tło generowane kodem (bez obrazka) */
             background-image: 
                 radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%),
                 repeating-linear-gradient(45deg, #111 0, #111 1px, transparent 0, transparent 50%);
@@ -49,7 +48,6 @@
             position: relative;
         }
 
-        /* Ozdobna linia na górze */
         .maintenance-card::before {
             content: '';
             position: absolute;
@@ -62,7 +60,6 @@
             box-shadow: var(--glow);
         }
 
-        /* Animacja ikony */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -110,7 +107,7 @@
 
         .progress-bar {
             height: 100%;
-            width: 60%; /* Startowa szerokość */
+            width: 60%;
             background: linear-gradient(90deg, var(--c-orange), var(--c-gold));
             border-radius: 10px;
             position: relative;
@@ -132,7 +129,6 @@
             display: block;
         }
 
-        /* Ikonki Social Media */
         .social-links {
             display: flex;
             justify-content: center;

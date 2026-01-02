@@ -22,7 +22,6 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* --- MODAL (OKIENKO SZCZEGÓŁÓW) --- */
         .custom-modal-overlay {
             display: none;
             position: fixed;
@@ -47,7 +46,7 @@
             background: #1a1a1a;
             color: #fff;
             width: 90%;
-            max-width: 950px; /* Nieco szerszy dla nowych informacji */
+            max-width: 950px; 
             border-radius: 20px;
             padding: 30px;
             border: 1px solid #333;
@@ -74,16 +73,16 @@
         @media (min-width: 768px) {
             .modal-split {
                 flex-direction: row;
-                align-items: center; /* ZMIANA: Wyśrodkowanie pionowe (było start) */
+                align-items: center;
             }
             .modal-left {
                 flex: 1;
-                display: flex;             /* ZMIANA: Dodatkowy flex dla kontenera zdjęcia */
-                justify-content: center;   /* ZMIANA: Wyśrodkowanie poziome */
-                align-items: center;       /* ZMIANA: Wyśrodkowanie pionowe wewnątrz kontenera */
+                display: flex;             
+                justify-content: center;   
+                align-items: center;       
             }
             .modal-right {
-                flex: 1.2; /* Prawa strona szersza dla tekstu */
+                flex: 1.2;
             }
         }
 
@@ -93,7 +92,6 @@
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             display: block;
-            /* Opcjonalnie: max-height aby zdjęcie nie było za wysokie na dużych ekranach */
             max-height: 500px; 
             object-fit: contain;
         }
@@ -113,7 +111,6 @@
             display: block;
         }
 
-        /* --- NOWOŚĆ: Siatka atrybutów (Smak/Zastosowanie) --- */
         .attribute-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -140,13 +137,11 @@
             line-height: 1.4;
         }
         
-        /* Ikonki przy atrybutach */
         .attr-icon {
             margin-right: 5px;
             opacity: 0.8;
         }
 
-        /* --- Koniec nowości --- */
 
         .honey-features {
             list-style: none;
@@ -361,7 +356,7 @@
     </div>
 
         <div class="footer-bottom" style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.85rem; color:#666;">
-            © 2025 Pasieka Pod Gruszką. Website designer & developer: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature" style="color:#fff; text-decoration:none; font-weight:bold; margin-left:5px;">Wiktor Zalewski</a>
             <p> Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com </p>
         
@@ -376,13 +371,11 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        // --- BAZA DANYCH MIODÓW Z ROZSZERZONYM OPISEM ---
         const honeyDatabase = {
             'spadziowy': {
                 title: 'Miód Spadziowy',
                 price: '55.00 PLN',
                 img: 'assets/images/products/spadziowy.jpg',
-                // NOWE POLA
                 taste: 'Żywiczny, łagodny, mało słodki.',
                 usage: 'Do kawy (nie zakwasza), na chleb, prosto z łyżeczki.',
                 

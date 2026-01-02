@@ -13,29 +13,26 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
-        /* Kontener układu - Domyślnie dla PC (Grid) */
         .contact-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1.5fr; /* Lewa kolumna węższa, mapa szersza */
+            grid-template-columns: 1fr 1.5fr;
             gap: 40px;
-            align-items: stretch; /* Równe wysokości */
+            align-items: stretch;
         }
 
-        /* Karta z danymi */
         .contact-card {
             padding: 40px;
-            background: #1a1a1a; /* Tło karty (jeśli nie jest zdefiniowane w .card) */
+            background: #1a1a1a;
             border: 1px solid #333;
             border-radius: 12px;
         }
 
-        /* Kontener mapy */
         .map-responsive {
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--c-gold, #ffc107);
             height: 100%;
-            min-height: 500px; /* Minimalna wysokość na PC */
+            min-height: 500px;
             position: relative;
         }
 
@@ -43,28 +40,26 @@
             width: 100%;
             height: 100%;
             border: 0;
-            display: block; /* Usuwa puste miejsce pod mapą */
+            display: block;
         }
 
-        /* --- WERSJA MOBILNA (Telefony i tablety) --- */
         @media (max-width: 900px) {
             .contact-wrapper {
-                grid-template-columns: 1fr; /* Jeden pod drugim */
+                grid-template-columns: 1fr;
                 gap: 30px;
             }
 
             .contact-card {
-                padding: 25px; /* Mniejsze marginesy wewnątrz */
-                order: 1; /* Dane kontaktowe pierwsze */
+                padding: 25px;
+                order: 1;
             }
 
             .map-responsive {
-                order: 2; /* Mapa druga */
-                height: 400px; /* Mniejsza wysokość na telefonie */
+                order: 2;
+                height: 400px;
                 min-height: auto;
             }
             
-            /* Powiększenie czcionek linków dla łatwiejszego klikania palcem */
             .contact-link {
                 display: inline-block;
                 padding: 5px 0;
@@ -200,7 +195,7 @@
         </div>
 
         <div class="footer-bottom" style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.85rem; color:#666;">
-            © 2025 Pasieka Pod Gruszką. Website designer & developer: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature" style="color:#fff; text-decoration:none; font-weight:bold; margin-left:5px;">Wiktor Zalewski</a>
             <p> Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com </p>
         

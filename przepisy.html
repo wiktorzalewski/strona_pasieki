@@ -76,7 +76,6 @@
             padding-top: 10px;
         }
 
-        /* --- STYLIZACJA MODALA PRZEPISU --- */
         .recipe-modal-overlay {
             display: none;
             position: fixed;
@@ -153,7 +152,6 @@
             gap: 40px;
         }
 
-        /* Lista składników */
         .ingredients-list {
             list-style: none;
             padding: 0;
@@ -182,7 +180,6 @@
             font-weight: bold;
         }
 
-        /* Instrukcje */
         .steps-box h4 {
             color: var(--c-gold, #ffc107);
             margin-top: 0;
@@ -224,7 +221,6 @@
             color: #000;
         }
 
-        /* RWD */
         @media (max-width: 768px) {
             .rm-grid {
                 grid-template-columns: 1fr;
@@ -406,7 +402,7 @@
     </div>
 
         <div class="footer-bottom" style="text-align:center; padding:20px; border-top:1px solid #222; font-size:0.85rem; color:#666;">
-            © 2025 Pasieka Pod Gruszką. Website designer & developer: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature" style="color:#fff; text-decoration:none; font-weight:bold; margin-left:5px;">Wiktor Zalewski</a>
             <p> Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com </p>
         
@@ -421,7 +417,6 @@
     <script src="assets/js/main.js"></script>
     
     <script>
-        // BAZA PRZEPISÓW
         const recipeDB = {
             'miodownik': {
                 title: 'Tradycyjny Miodownik',
@@ -490,22 +485,18 @@
 
             const modal = document.getElementById('recipe-modal');
             
-            // Ustaw dane
             document.getElementById('rm-title').innerText = data.title;
             
-            // Obrazek (z fallbackiem)
             const img = document.getElementById('rm-img');
             img.src = data.img;
             img.onerror = function() { this.src = 'https://placehold.co/800x400?text=Smacznego'; };
 
-            // Generowanie listy składników
             const ingList = document.getElementById('rm-ingredients');
             ingList.innerHTML = '<h4>Składniki:</h4>';
             data.ingredients.forEach(item => {
                 ingList.innerHTML += `<li>${item}</li>`;
             });
 
-            // Generowanie kroków
             const stepsDiv = document.getElementById('rm-steps');
             stepsDiv.innerHTML = '';
             data.steps.forEach((step, index) => {
@@ -517,10 +508,9 @@
                 `;
             });
 
-            // Pokaż modal
             modal.style.display = 'flex';
             setTimeout(() => modal.classList.add('active'), 10);
-            document.body.style.overflow = 'hidden'; // Blokada przewijania tła
+            document.body.style.overflow = 'hidden';
         }
 
         function closeRecipe() {
@@ -532,7 +522,6 @@
             }, 300);
         }
 
-        // Zamknięcie na klik w tło
         window.onclick = function(e) {
             const modal = document.getElementById('recipe-modal');
             if (e.target === modal) closeRecipe();

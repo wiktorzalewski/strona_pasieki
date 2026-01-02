@@ -17,7 +17,6 @@
 
         body {
             background-color: var(--c-bg-base);
-            /* Subtelny wzór plastra miodu w tle */
             background-image: radial-gradient(circle at 50% 50%, #111 0%, #020202 70%);
             color: var(--c-text-main);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,19 +27,16 @@
             text-align: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden; /* Żeby animacje nie robiły scrollbarów */
+            overflow: hidden;
         }
 
         .container {
             position: relative;
             max-width: 600px;
             padding: 50px 30px;
-            /* Usunąłem tło ramki, żeby było bardziej nowocześnie i "przestrzennie", 
-               ale zostawiłem delikatną poświatę */
             z-index: 10;
         }
 
-        /* Animacja lewitującej pszczoły */
         @keyframes floatBee {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(5deg); }
@@ -60,8 +56,7 @@
             font-size: 8rem;
             line-height: 1;
             font-weight: 900;
-            color: transparent;
-            /* Efekt złotego gradientu na tekście */
+            color: transparent;/
             background: linear-gradient(to bottom, var(--c-amber), var(--c-dark-orange));
             -webkit-background-clip: text;
             background-clip: text;
@@ -88,7 +83,6 @@
             margin-right: auto;
         }
 
-        /* Kontener na przyciski */
         .actions {
             display: flex;
             gap: 15px;
@@ -106,7 +100,6 @@
             border: 2px solid transparent;
         }
 
-        /* Główny przycisk */
         .btn-primary {
             background-color: var(--c-amber);
             color: #000;
@@ -120,7 +113,6 @@
             box-shadow: 0 10px 20px rgba(204, 85, 0, 0.4);
         }
 
-        /* Drugorzędny przycisk (outline) */
         .btn-secondary {
             border-color: #444;
             color: #ccc;
@@ -132,7 +124,6 @@
             color: var(--c-amber);
         }
 
-        /* Dekoracyjne kółka w tle (rozmyte) */
         .bg-circle {
             position: absolute;
             border-radius: 50%;
