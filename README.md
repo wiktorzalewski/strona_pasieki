@@ -1,5 +1,6 @@
 ## Project structure (EN) / Struktura projektu (PL)
 
+```text
 public_html/
 ├── 404.html
 ├── index.html
@@ -34,3 +35,4 @@ public_html/
 │   │   └── logo.png
 │   │
 │   └── data/
+```
