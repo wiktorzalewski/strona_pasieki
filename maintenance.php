@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Wiktor Zalewski" />
 
-    <title>Pasieka Pod Gruszką</title>
+    <title>Pasieka Pod Gruszką - Przerwa Techniczna</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
     <meta property="og:description" content="Strona w trakcie aktualizacji. Wracamy wkrótce!">
     <meta property="og:image" content="https://pasiekapodgruszka.pl/assets/images/tlo_glowne.jpg">
     <meta property="og:locale" content="pl_PL">
-    <link rel="icon" href="assets/logo/favicon.ico">
+    <link rel="icon" href="assets/images/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -199,9 +199,9 @@
         <span class="timer">Szacowany powrót: ~15 min</span>
 
         <div class="social-links">
-            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:kontakt@wikzal.pl"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:kontakt@pasiekapodgruszka.pl"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
 

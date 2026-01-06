@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="miód, pasieka, pszczoły, miód naturalny, miód lipowy, miód rzepakowy, rybie, raszyn, warszawa, pasieka pod gruszką, pasja">
-    <meta name="description" content="Odkryj prawdziwy smak natury! Najlepsze miody z naszej rodzinnej pasieki Pod Gruszką. Naturalny miód!">
-    <meta name="robots" content="follow"/>
+    <meta name="keywords"
+        content="miód, pasieka, pszczoły, miód naturalny, miód lipowy, miód rzepakowy, rybie, raszyn, warszawa, pasieka pod gruszką">
+    <meta name="description"
+        content="Odkryj smak natury w Pasiece Pod Gruszką! Oferujemy tradycyjne miody: lipowy, rzepakowy, spadziowy. Sprawdź naszą ofertę i odwiedź nas w Rybiu.">
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="Wiktor Zalewski" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasieka Pod Gruszką</title> 
+
+    <title>Pasieka Pod Gruszką</title>
+    <link rel="canonical" href="https://pasiekapodgruszka.pl/index.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pasiekapodgruszka.pl/index.html">
+    <meta property="og:title" content="Pasieka Pod Gruszką - Prawdziwe Miody Naturalne">
+    <meta property="og:description"
+        content="Odkryj smak natury w Pasiece Pod Gruszką! Oferujemy tradycyjne miody: lipowy, rzepakowy, spadziowy. Sprawdź naszą ofertę.">
+    <meta property="og:image" content="https://pasiekapodgruszka.pl/assets/images/tlo_glowne.jpg">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Pasieka Pod Gruszką">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pasiekapodgruszka.pl/index.html">
+    <meta property="twitter:title" content="Pasieka Pod Gruszką - Prawdziwe Miody Naturalne">
+    <meta property="twitter:description"
+        content="Odkryj smak natury w Pasiece Pod Gruszką! Oferujemy tradycyjne miody: lipowy, rzepakowy, spadziowy.">
+    <meta property="twitter:image" content="https://pasiekapodgruszka.pl/assets/images/tlo_glowne.jpg">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="assets/logo/favicon.ico">
 
     <style>
-        .hero-header {
-            position: relative;
-            padding: 160px 20px;
-            text-align: center;
-            color: #fff;
-            overflow: hidden;
-            background-color: #1a1a1a;
-        }
-
         .hero-header::before {
             content: "";
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('assets/images/header_bg.jpg'); 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/tlo_glowne.jpg');
             background-size: cover;
             background-position: center;
-            filter: blur(3px); 
-            transform: scale(1.1); 
+            filter: blur(1px);
+            transform: scale(1.1);
             z-index: 0;
-        }
-
-        .hero-header::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
     </style>
 </head>
+
 <body>
     <div id="transition-overlay"></div>
-    
+
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -58,9 +63,10 @@
             </a>
 
             <ul class="menu desktop-links">
-                <li><a href="index.html"class="active"><i class="fa-solid fa-house"></i> Start</a></li>
+                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Start</a></li>
                 <li><a href="products.html"><i class="fa-solid fa-store"></i> Sklep</a></li>
-                <li><a href="rescue.html" style="color:var(--c-orange, #e67e22);"><i class="fa-solid fa-truck-medical"></i> Pogotowie</a></li>
+                <li><a href="rescue.html" style="color:var(--c-orange, #e67e22);"><i
+                            class="fa-solid fa-truck-medical"></i> Pogotowie</a></li>
                 <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Kontakt</a></li>
             </ul>
 
@@ -76,7 +82,7 @@
             <span class="side-logo"><i class="fa-solid fa-bars"></i> Nawigacja</span>
             <span id="menu-close" class="close-btn">&times;</span>
         </div>
-        
+
         <ul class="side-menu-list">
             <li><a href="index.html"><i class="fa-solid fa-house"></i> Start</a></li>
             <li><a href="products.html"><i class="fa-solid fa-jar"></i> Sklep z miodami</a></li>
@@ -93,8 +99,11 @@
 
     <header class="hero-header">
         <div class="hero-content">
-            <h1 class="section-title" style="margin-bottom: 10px; font-size: 4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Złoto Natury</h1>
-            <p style="font-size: 1.3rem; color: var(--c-gold); margin-bottom: 40px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); font-weight: bold;">
+            <h1 class="section-title"
+                style="margin-bottom: 10px; font-size: 4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Złoto Natury
+            </h1>
+            <p
+                style="font-size: 1.3rem; color: var(--c-gold); margin-bottom: 40px; text-shadow: 1px 1px 2px rgba(0,0,0,0.8); font-weight: bold;">
                 Tradycyjna pasieka w nowoczesnym wydaniu.
             </p>
             <a href="products.html" class="btn-main" style="text-decoration: none;">WYBIERZ MIÓD</a>
@@ -109,7 +118,8 @@
                 <i class="fa-solid fa-handshake-angle"></i>
             </div>
             <h3>Wsparcie zapylaczy</h3>
-            <p>Kupując u nas, wspierasz lokalny ekosystem. Każdy słoik to pomoc w utrzymaniu populacji pszczół na Mazowszu.</p>
+            <p>Kupując u nas, wspierasz lokalny ekosystem. Każdy słoik to pomoc w utrzymaniu populacji pszczół na
+                Mazowszu.</p>
         </div>
 
         <div class="section-feature" style="text-align: center;">
@@ -135,21 +145,14 @@
             <h3>Pasieka z pasji</h3>
             <p>Nasza pasieka powstała z prawdziwego zamiłowania. Dbamy o każdą pszczelą rodzinę jak o własną.</p>
         </div>
-
-        <div class="section-feature" style="text-align: center;">
-            <div class="icon-feature-box">
-                <i class="fa-solid fa-recycle"></i>
-            </div>
-            <h3>Recykling słoików</h3>
-            <p>Zwróć nam puste słoiki, a otrzymasz rabat na kolejne zakupy. Razem dbamy o naszą planetę.</p>
-        </div>
     </main>
 
     <div id="newsletter-box" class="newsletter-box hidden">
         <span id="newsletter-close" class="newsletter-close">×</span>
         <h4 style="color:var(--c-gold);">Słodkie Nowości!</h4>
         <p style="font-size:0.9rem; margin:10px 0;">Zapisz się, aby otrzymać kod na darmową dostawę.</p>
-        <input type="email" placeholder="Twój email" style="width:100%; padding:10px; border:1px solid var(--c-gold); background:transparent; color:#fff;">
+        <input type="email" placeholder="Twój email"
+            style="width:100%; padding:10px; border:1px solid var(--c-gold); background:transparent; color:#fff;">
         <button class="btn-main" style="width:100%; margin-top:10px; padding:10px;">ZAPISZ SIĘ</button>
     </div>
 
@@ -163,41 +166,45 @@
                     Naturalne miody z pasją.
                 </p>
             </div>
-            
+
             <div class="footer-col">
                 <h4 style="color:#fff; margin-bottom:15px;">Odbiory Osobiste</h4>
                 <p style="color:#888; font-size:0.9rem;">
-                    <i class="fas fa-map-marker-alt" style="color:var(--c-gold); margin-right:5px;"></i> Rybie, ul. Mała 10, 05-090
+                    <i class="fas fa-map-marker-alt" style="color:var(--c-gold); margin-right:5px;"></i> Rybie, ul. Mała
+                    10, 05-090
                 </p>
                 <p style="color:var(--c-gold); font-weight:bold; margin: 10px 0;">
                     <i class="fas fa-phone" style="margin-right:5px;"></i> Tel: +48 506 224 982
                 </p>
                 <small style="color:#666;">Prosimy dzwonić przed przyjazdem.</small>
             </div>
-            
+
             <div class="footer-col">
                 <h4 style="color:#fff; margin-bottom:15px;">Linki</h4>
                 <ul style="list-style:none;">
                     <li style="margin-bottom:5px;">
-                        <a href="products.html" style="color:#888;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:5px;"></i> Sklep</a>
+                        <a href="products.html" style="color:#888;"><i class="fas fa-chevron-right"
+                                style="font-size:0.8rem; margin-right:5px;"></i> Sklep</a>
                     </li>
                     <li style="margin-bottom:5px;">
-                        <a href="rescue.html" style="color:#888;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:5px;"></i> Pogotowie Rójkowe</a>
+                        <a href="rescue.html" style="color:#888;"><i class="fas fa-chevron-right"
+                                style="font-size:0.8rem; margin-right:5px;"></i> Pogotowie Rójkowe</a>
                     </li>
                     <li style="margin-bottom:5px;">
-                        <a href="przepisy.html" style="color:#888;"><i class="fas fa-chevron-right" style="font-size:0.8rem; margin-right:5px;"></i> Przepisy</a>
+                        <a href="przepisy.html" style="color:#888;"><i class="fas fa-chevron-right"
+                                style="font-size:0.8rem; margin-right:5px;"></i> Przepisy</a>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            © 2025 Pasieka Pod Gruszką. Projektant & programista strony: 
+            © 2025 Pasieka Pod Gruszką. Projektant & programista strony:
             <a href="https://github.com/wiktorzalewski" target="_blank" class="developer-signature">Wiktor Zalewski</a>
             <p>Błędy strony należy zgłaszać za pomocą wiadomości email na wiktorzalewski50@gmail.com</p>
-            
+
             <div style="margin-top: 20px;">
-                <a href="login.php" class="admin-panel-link">
+                <a href="https://space.wikzal.pl/phpmyadmin/" class="admin-panel-link" target="_blank">
                     <i class="fas fa-tools"></i> Panel Admina
                 </a>
             </div>
@@ -206,4 +213,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

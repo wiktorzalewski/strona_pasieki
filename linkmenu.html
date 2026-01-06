@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lista wszystkich podstron Pasieki Pod Gruszką. Szybka nawigacja do sklepu, bloga, galerii i kontaktu.">
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Wiktor Zalewski" />
+
+    <title>Pasieka Pod Gruszką</title>
+    <link rel="canonical" href="https://pasiekapodgruszka.pl/linkmenu.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pasiekapodgruszka.pl/linkmenu.html">
+    <meta property="og:title" content="Mapa Strony - Wszystkie Linki">
+    <meta property="og:description" content="Lista wszystkich podstron Pasieki Pod Gruszką. Szybka nawigacja.">
+    <meta property="og:image" content="https://pasiekapodgruszka.pl/assets/images/tlo_glowne.jpg">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Pasieka Pod Gruszką">
+
     <link rel="icon" href="assets/logo/favicon.ico">
-    <title>Pasieka Pod Gruszką | Linki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <style>
         :root {
             --c-bg: #050505;
@@ -50,7 +67,7 @@
             text-shadow: 0 0 15px var(--c-gold-glow);
             text-transform: uppercase;
         }
-        
+
         .header p {
             color: #aaa;
             font-size: 1rem;
@@ -104,6 +121,7 @@
                 transform: translateY(-3px);
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 10px var(--c-gold-glow);
             }
+
             .link-button:hover .link-icon {
                 transform: scale(1.2);
             }
@@ -136,25 +154,55 @@
 
         /* Animacja wejścia */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .link-button {
             animation: fadeInUp 0.5s ease backwards;
         }
 
-        .link-button:nth-child(1) { animation-delay: 0.1s; }
-        .link-button:nth-child(2) { animation-delay: 0.2s; }
-        .link-button:nth-child(3) { animation-delay: 0.3s; }
-        .link-button:nth-child(4) { animation-delay: 0.4s; }
-        .link-button:nth-child(5) { animation-delay: 0.5s; }
-        .link-button:nth-child(6) { animation-delay: 0.6s; }
-        .link-button:nth-child(7) { animation-delay: 0.7s; }
-        .link-button:nth-child(8) { animation-delay: 0.8s; }
+        .link-button:nth-child(1) {
+            animation-delay: 0.1s;
+        }
 
+        .link-button:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .link-button:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .link-button:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .link-button:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .link-button:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .link-button:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .link-button:nth-child(8) {
+            animation-delay: 0.8s;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="header">
@@ -163,12 +211,12 @@
     </div>
 
     <div class="links-container">
-        
+
         <a href="link_fb" target="_blank" class="link-button">
             <i class="fa-brands fa-facebook-f link-icon"></i>
             <span>Facebook</span>
         </a>
-        
+
         <a href="link_ig" target="_blank" class="link-button">
             <i class="fa-brands fa-instagram link-icon"></i>
             <span>Instagram</span>
@@ -178,8 +226,8 @@
             <i class="fa-brands fa-tiktok link-icon"></i>
             <span>TikTok</span>
         </a>
-        
-        <a href="link_maps" target="_blank" class="link-button">
+
+        <a href="https://maps.app.goo.gl/bmCz3riNS5zgQ4Un6" target="_blank" class="link-button">
             <i class="fa-solid fa-location-dot link-icon"></i>
             <span>Nasza Lokalizacja</span>
         </a>
@@ -193,18 +241,19 @@
             <i class="fa-solid fa-jar link-icon"></i>
             <span>Profil 123 Miody</span>
         </a>
-        
-        <a href="tel:+48XXXXXXXXX" class="link-button">
+
+        <a href="tel:+48506224982" class="link-button">
             <i class="fa-solid fa-phone-volume link-icon"></i>
             <span>Zadzwoń do nas</span>
         </a>
 
-        <a href="index.html" class="link-button btn-home">
+        <a href="/" class="link-button btn-home">
             <i class="fa-solid fa-house-user link-icon"></i>
             <span>Strona Główna Pasieki</span>
         </a>
 
     </div>
-    
+
 </body>
+
 </html>
