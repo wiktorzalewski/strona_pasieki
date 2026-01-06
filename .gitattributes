@@ -1,0 +1,5 @@
+# Wymuś, aby wszystko co kończy się na .php było traktowane jako PHP
+*.php linguist-language=php
+
+# Zignoruj pliki konfiguracyjne nginx w statystykach
+nginx/* linguist-documentation=true
