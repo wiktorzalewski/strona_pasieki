@@ -1,12 +1,10 @@
-# Wymuś, aby wszystko co kończy się na .php było traktowane jako PHP
+# Wyklucz konfigurację serwera i bazy z liczenia statystyk kodu
+nginx/** linguist-detectable=false
+sql/** linguist-detectable=false
+
+# Oznacz te foldery jako "sprzętowe/zewnętrzne" (vendored)
+nginx/** linguist-vendored
+sql/** linguist-vendored
+
+# Wymuś PHP dla plików, które mogą być mylone z Hack
 *.php linguist-language=php
-
-# Zignoruj pliki konfiguracyjne nginx w statystykach
-nginx/* linguist-documentation=true
-
-# Traktuj konfigurację Nginxa jako dane/dokumentację, a nie kod
-nginx/**/* linguist-vendored
-nginx/**/* linguist-documentation
-
-# Jeśli masz pliki .sql, je też możesz wykluczyć, żeby nie psuły wykresu
-sql/*.sql linguist-vendored
