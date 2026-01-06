@@ -2,19 +2,25 @@
 
 ```text
 public_html/
-├── 404.html
-├── index.html
-├── blog.html
-├── contact.html
-├── gallery.html
-├── kits.html
+├── 404.php
+├── index.php
+├── blog.php
+├── contact.php
+├── gallery.php
+├── kits.php
 ├── linkmenu.html
-├── maintenance.html
-├── my.html
-├── products.html
-├── przepisy.html
-├── rescue.html
+├── maintenance.php
+├── my.php
+├── products.php
+├── przepisy.php
+├── rescue.php
 │
+├── includes/
+│   └── db.php
+│   └── footer.php
+│   └── header.php
+├── sql/
+│   └── schema.sql
 ├── assets/
 │   ├── css/
 │   │   └── style.css
@@ -35,4 +41,9 @@ public_html/
 │   │   └── logo.png
 │   │
 │   └── data/
+
+nginx/
+├── sites-enabled
+│   └── space.wikzal.pl
+
 ```
