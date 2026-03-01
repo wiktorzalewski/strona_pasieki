@@ -1,0 +1,148 @@
+Folder PATH listing for volume Acer
+Volume serial number is 52C0-7CB7
+C:.
+|   .gitignore
+|   404.php
+|   apply_advanced_migrations.php
+|   apply_analytics_migration.php
+|   apply_google_reviews_migration.php
+|   apply_migration.php
+|   apply_new_features_migration.php
+|   blog.php
+|   check_db.php
+|   contact.php
+|   debug_smtp.php
+|   diag.php
+|   gallery.php
+|   index.html
+|   index.php
+|   kits.php
+|   linkmenu.html
+|   maintenance.html
+|   maintenance.php
+|   my.php
+|   newsletter.php
+|   notify_request.php
+|   optimize_images.php
+|   products.php
+|   przepisy.php
+|   README.md
+|   rescue.php
+|   robots.txt
+|   save_cookie_consent.php
+|   sitemap.xml
+|   tree.txt
+|   
++---admin
+|       accounts.php
+|       activity_log.php
+|       analytics.php
+|       auth.php
+|       backups.php
+|       dashboard.php
+|       debug.php
+|       debug_session.php
+|       diag.php
+|       discounts.php
+|       errcheck.php
+|       export.php
+|       forgot_password.php
+|       gallery.php
+|       google_reviews.php
+|       hasla.php
+|       helper.php
+|       index.php
+|       kits.php
+|       logout.php
+|       maintenance_settings.php
+|       messages.php
+|       newsletter.php
+|       notes_api.php
+|       page_config.php
+|       products.php
+|       recipes.php
+|       redirects.php
+|       reset_password.php
+|       seo_editor.php
+|       server_info.php
+|       sessions.php
+|       style.css
+|       test_login.php
+|       verify_email.php
+|       
++---assets
+|   +---css
+|   |       style.css
+|   |       
+|   +---data
+|   |       blog.json
+|   |       produkty.json
+|   |       przepisy.json
+|   |       
+|   +---images
+|   |   |   tlo_glowne.jpg
+|   |   |   
+|   |   +---blog
+|   |   +---gallery
+|   |   |       1.jpg
+|   |   |       10.jpg
+|   |   |       11.jpg
+|   |   |       12.jpg
+|   |   |       13.jpg
+|   |   |       14.jpg
+|   |   |       15.jpg
+|   |   |       16.jpg
+|   |   |       17.jpg
+|   |   |       18.jpg
+|   |   |       19.jpg
+|   |   |       2.jpg
+|   |   |       20.jpg
+|   |   |       21.jpg
+|   |   |       22.jpg
+|   |   |       23.jpg
+|   |   |       24.jpg
+|   |   |       25.jpg
+|   |   |       3.jpg
+|   |   |       4.jpg
+|   |   |       5.jpg
+|   |   |       6.jpg
+|   |   |       7.jpg
+|   |   |       8.jpg
+|   |   |       9.jpg
+|   |   |       
+|   |   +---o_nas
+|   |   +---products
+|   |   |       lipowy.jpg
+|   |   |       rzepakowy.jpg
+|   |   |       spadziowy.jpg
+|   |   |       
+|   |   \---zestawy
+|   +---js
+|   |       main.js
+|   |       script.js
+|   |       
+|   \---logo
+|           favicon.ico
+|           full_logo.jpeg
+|           logo.png
+|           
++---includes
+|       cookie_banner.php
+|       db.php
+|       footer.php
+|       header.php
+|       
++---sql
+|       02_update_schema.sql
+|       03_newsletter_schema.sql
+|       04_cookie_consent_schema.sql
+|       05_admin_email_schema.sql
+|       migration_accounts.sql
+|       migration_emails.sql
+|       migration_stock.sql
+|       schema.sql
+|       
+\---tech
+        cart.html
+        testy.html
+        

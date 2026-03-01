@@ -19,3 +19,5 @@ Repozytorium zawierające kod źródłowy strony internetowej **Pasieka Pod Grus
 2. Połączenie z bazą: Zaktualizuj hasła w `includes/db.php` oraz `maintenance.php` lub w innych plikach konfiguracyjnych (hasła w tym repozytorium zostały ukryte).
 3. Serwer SMTP: Zaktualizuj poświadczenia SMTP w `newsletter.php` i `debug_smtp.php`.
 4. Upewnij się, że serwer obsługuje PHP oraz moduł `pdo_mysql`.
+\\\" >> README.md; cat tree.txt >> README.md; echo 
+\\\"
