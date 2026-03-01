@@ -1,100 +1,53 @@
-# 🐝 Pasieka Pod Gruszką
+# Pasieka Pod Gruszką
 
-Repozytorium zawierające kod źródłowy zaawansowanej strony internetowej i sklepu dla pasieki **Pasieka Pod Gruszką**. Projekt łączy nowoczesny wygląd front-endu z potężnym, dedykowanym panelem administracyjnym.
+E-commerce platform and content management system built from scratch in PHP for a local apiary business. Includes a custom-built administration panel, automated newsletter system, Google Reviews integration, and a dedicated maintenance mode architecture.
 
----
+## Tech Stack
+- **Backend:** PHP 8.x
+- **Database:** MySQL (PDO)
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6)
+- **Integrations:** Google Places API, SMTP for automated mailing
 
-## 🚀 Ostatnia duża aktualizacja (Marzec 2026)
-- **Nowy, bezpieczny Panel Administratora** z systemem ról, logowania i odzyskiwania haseł.
-- **Integracja Google Reviews** - Automatyczne pobieranie i wyświetlanie opinii klientów.
-- **System Newslettera** - Automatyczne powiadomienia i obsługa e-maili przez SMTP.
-- **Powiadomienia o dostępności** - Powiadomienia dla klientów o ponownej dostępności produktów.
-- **Tryb Konserwacji (Maintenance Mode)** - Elegancki, zautomatyzowany tryb przerwy technicznej na stronie.
-- **Zaawansowane statystyki i analityka** wbudowane bezpośrednio w panel.
+## Core Features
+- **Custom Admin Dashboard:** Comprehensive role-based access control (RBAC), activity logging, and CMS capabilities.
+- **Product & Stock Management:** Tracks inventory, handles back-in-stock notifications, and manages image galleries.
+- **Automated Newsletter & Mailing:** Integrated SMTP client with automated bulk mailing and subscriber management.
+- **Google Reviews Sync:** Fetches, caches, and sanitizes Google Reviews via Places API to minimize latency on page load.
+- **Maintenance Architecture:** Automated database-driven maintenance mode routing with scheduled downtime support.
+- **Security:** CSRF tokens, secure password hashing (Bcrypt), parameterized PDO queries, and sanitized inputs.
 
----
-
-## 🛠 Technologie
-- **Backend:** PHP 8+
-- **Baza Danych:** MySQL (PDO)
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **Dodatkowe API:** Google Places API (opinii)
-- **Inne:** SMTP dla zautomatyzowanych wysyłek mailowych
-
----
-
-## 📂 Struktura projektu
-- 🛡️ `/admin` - Wszechstronny panel administracyjny do zarządzania stroną (produkty, zamówienia, statystyki, newsletter, powiadomienia, opinie Google, SEO, kopie zapasowe, Tryb Konserwacji).
-- 🎨 `/assets` - Zasoby graficzne, arkusze stylów (CSS) i skrypty (JS).
-- ⚙️ `/includes` - Współdzielone pliki konfiguracyjne oraz reużywalne moduły (np. połączenie z bazą danych, nagłówki/stopki).
-- 🗄️ `/sql` - Schematy i narzędzia do zaawansowanej migracji bazy danych (w tym dane testowe, uprawnienia ról i schemat włączania nowych funkcji).
-- 📄 `index.php`, `products.php`, itp. - Publiczne strony obsługujące ruch klientów (galeria, sklep, kontakt z Google Maps, blog).
-
----
-
-## ⚙️ Konfiguracja (Deployment)
-1. **Baza Danych:** Zaimportuj pliki z folderu `/sql` do swojej bazy MySQL (najpierw `schema.sql`, potem wybrane migracje, np. `migration_accounts.sql`, `05_admin_email_schema.sql`).
-2. **Połączenie z bazą:** Zaktualizuj i uzupełnij hasła w pliku `includes/db.php` oraz `maintenance.php` lub w innych plikach korzystających z połączeń PDO (hasła w repozytorium na GitHubie zostały **usunięte i zastąpione przez proste placeholdery** dla bezpieczeństwa).
-3. **Serwer SMTP:** Zaktualizuj poświadczenia SMTP do wysyłki maili w systemie w plikach takich jak `newsletter.php` i `debug_smtp.php`.
-4. **Wymagania:** Upewnij się, że serwer PHP posiada zainstalowany i włączony moduł `pdo_mysql`.
-
----
+## Directory Structure
 ```text
-Folder PATH listing
-C:.
-|   .gitignore
-|   404.php
-|   apply_advanced_migrations.php
-|   apply_analytics_migration.php
-|   apply_google_reviews_migration.php
-|   apply_migration.php
-|   apply_new_features_migration.php
-|   blog.php
-|   check_db.php
-|   contact.php
-|   debug_smtp.php
-|   diag.php
-|   gallery.php
-|   index.html
-|   index.php
-|   kits.php
-|   linkmenu.html
-|   maintenance.html
-|   maintenance.php
-|   my.php
-|   newsletter.php
-|   notify_request.php
-|   optimize_images.php
-|   products.php
-|   przepisy.php
-|   README.md
-|   rescue.php
-|   robots.txt
-|   save_cookie_consent.php
-|   sitemap.xml
-|   tree.txt
-|   
-+---admin
-|       accounts.php
-|       activity_log.php
-|       analytics.php
-|       ... (szczegółowy kod źródłowy panelu - ponad 35 plików kontrolerów i widoków)
-|       
-+---assets
-|   +---css
-|   |       style.css
-|   +---data
-|   |       blog.json, produkty.json, przepisy.json
-|   +---images
-|   |       tlo_glowne.jpg, products (...), zsestawy (...), blog (...), gallery (...)
-|   +---js
-|   |       main.js, script.js
-|   \---logo
-|           favicon.ico, logo.png, full_logo.jpeg
-+---includes
-|       cookie_banner.php, db.php, footer.php, header.php
-+---sql
-|       02_update_schema.sql, schema.sql, migrations (...)
-\---tech
-        testy.html, cart.html
+.
+├── admin/          # Admin dashboard controllers, views, and routing
+├── assets/         # Static assets (CSS, JS, optimized images, JSON endpoints)
+├── includes/       # Shared logic, layout partials, and DB connection wrappers
+├── sql/            # Database schemas, migrations, and seed data
+└── setup/          # [WIP] Environment configurations
 ```
+
+## Setup Instructions
+
+1. **Database Initialization**
+   - Create a new MySQL database.
+   - Run `sql/schema.sql` to initialize tables.
+   - Run necessary migrations (e.g., `sql/migration_accounts.sql`, `sql/05_admin_email_schema.sql`).
+
+2. **Environment Configuration**
+   - Rename/copy `includes/db.php.example` to `includes/db.php` (or modify `includes/db.php` directly if pulling from this repo).
+   - Update `$host`, `$db_user`, `$db_pass`, and `$db_name` with your local database credentials.
+   - For SMTP functionality, configure credentials in `newsletter.php` and `debug_smtp.php`.
+
+3. **Web Server**
+   - Point your local web server (Apache/Nginx) document root to the project directory.
+   - Ensure `mod_rewrite` is enabled if setting up custom routing in the future.
+   - Provide write permissions for any upload directories if applicable (`assets/images/gallery`).
+
+## Recent Updates (March 2026)
+- Implemented secure authentication flow with password recovery constraints.
+- Added dynamic Google Reviews caching system.
+- Refactored mailing logic to use a centralized SMTP service.
+- Introduced automated maintenance mode scheduling.
+
+## License
+Proprietary / All Rights Reserved.
