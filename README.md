@@ -1,6 +1,6 @@
 # Pasieka Pod Gruszką
 
-E-commerce platform and content management system built from scratch in PHP for a local apiary business. Includes a custom-built administration panel, automated newsletter system, Google Reviews integration, and a dedicated maintenance mode architecture.
+Platforma e-commerce oraz system CMS stworzony od podstaw w PHP dla lokalnej pasieki. Projekt zawiera autorski panel administracyjny, zautomatyzowany system newslettera, integrację z opiniami Google oraz dedykowaną architekturę trybu konserwacji (maintenance mode).
 
 ## Tech Stack
 
@@ -11,45 +11,45 @@ E-commerce platform and content management system built from scratch in PHP for 
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?logo=javascript&logoColor=F7DF1E&style=for-the-badge)
 
 ## Core Features
-- **Custom Admin Dashboard:** Comprehensive role-based access control (RBAC), activity logging, and CMS capabilities.
-- **Product & Stock Management:** Tracks inventory, handles back-in-stock notifications, and manages image galleries.
-- **Automated Newsletter & Mailing:** Integrated SMTP client with automated bulk mailing and subscriber management.
-- **Google Reviews Sync:** Fetches, caches, and sanitizes Google Reviews via Places API to minimize latency on page load.
-- **Maintenance Architecture:** Automated database-driven maintenance mode routing with scheduled downtime support.
-- **Security:** CSRF tokens, secure password hashing (Bcrypt), parameterized PDO queries, and sanitized inputs.
+- **Autorski panel administratora:** Rozbudowana kontrola dostępu oparta na rolach (RBAC), logowanie aktywności oraz funkcjonalności CMS.
+- **Zarządzanie produktami i stanami magazynowymi:** Śledzenie dostępności asortymentu, obsługa powiadomień o powrocie produktu na stan oraz zarządzanie galeriami zdjęć.
+- **Zautomatyzowany Newsletter:** Zintegrowany klient SMTP do automatycznej wysyłki mailingu oraz zarządzania subskrybentami.
+- **Synchronizacja opinii Google:** Pobieranie, cachowanie i sanityzacja opinii z Google Places API, aby zminimalizować opóźnienia przy ładowaniu strony (latency).
+- **Architektura Maintenance Mode:** Automatyczny, sterowany z bazy danych tryb przerwy technicznej z obsługą planowanych okien konserwacyjnych.
+- **Bezpieczeństwo:** Ochrona przed CSRF, bezpieczne hashowanie haseł (Bcrypt), parametryzowane zapytania PDO oraz sanityzacja danych wejściowych.
 
 ## Directory Structure
 ```text
 .
-├── admin/          # Admin dashboard controllers, views, and routing
-├── assets/         # Static assets (CSS, JS, optimized images, JSON endpoints)
-├── includes/       # Shared logic, layout partials, and DB connection wrappers
-├── sql/            # Database schemas, migrations, and seed data
-└── setup/          # [WIP] Environment configurations
+├── admin/          # Kontrolery, widoki oraz routing panelu administratora
+├── assets/         # Zasoby statyczne (CSS, JS, zoptymalizowane grafiki, endpointy JSON)
+├── includes/       # Współdzielona logika biznesowa, szablony i wrapper połączenia z bazą
+├── sql/            # Schematy bazy danych, migracje i początkowe dane (seed data)
+└── setup/          # [WIP] Konfiguracja środowiska uruchomieniowego
 ```
 
 ## Setup Instructions
 
-1. **Database Initialization**
-   - Create a new MySQL database.
-   - Run `sql/schema.sql` to initialize tables.
-   - Run necessary migrations (e.g., `sql/migration_accounts.sql`, `sql/05_admin_email_schema.sql`).
+1. **Inicjalizacja Bazy Danych**
+   - Utwórz nową bazę danych MySQL.
+   - Uruchom `sql/schema.sql`, aby utworzyć tabele.
+   - Wykonaj niezbędne migracje (np. `sql/migration_accounts.sql`, `sql/05_admin_email_schema.sql`).
 
-2. **Environment Configuration**
-   - Rename/copy `includes/db.php.example` to `includes/db.php` (or modify `includes/db.php` directly if pulling from this repo).
-   - Update `$host`, `$db_user`, `$db_pass`, and `$db_name` with your local database credentials.
-   - For SMTP functionality, configure credentials in `newsletter.php` and `debug_smtp.php`.
+2. **Konfiguracja Środowiska**
+   - Skopiuj `includes/db.php.example` jako `includes/db.php` (lub bezpośrednio zmodyfikuj `includes/db.php`, jeśli pobierasz kod z repozytorium).
+   - Zaktualizuj zmienne `$host`, `$db_user`, `$db_pass` oraz `$db_name` własnymi danymi dostępowymi do lokalnej bazy danych.
+   - W przypadku funkcjonalności SMTP, skonfiguruj odpowiednie poświadczenia w plikach `newsletter.php` i `debug_smtp.php`.
 
-3. **Web Server**
-   - Point your local web server (Apache/Nginx) document root to the project directory.
-   - Ensure `mod_rewrite` is enabled if setting up custom routing in the future.
-   - Provide write permissions for any upload directories if applicable (`assets/images/gallery`).
+3. **Serwer WWW**
+   - Wskaż katalog projektu jako "document root" w lokalnym serwerze webowym (Apache/Nginx).
+   - Upewnij się, że moduł `mod_rewrite` jest włączony w celu obsługi autorskiego routingu.
+   - Nadaj odpowiednie uprawnienia zapisu dla katalogów, do których zapisywane są przesyłane pliki (np. `assets/images/gallery`).
 
-## Recent Updates (March 2026)
-- Implemented secure authentication flow with password recovery constraints.
-- Added dynamic Google Reviews caching system.
-- Refactored mailing logic to use a centralized SMTP service.
-- Introduced automated maintenance mode scheduling.
+## Recent Updates (Marzec 2026)
+- Wdrożono bezpieczny przepływ uwierzytelniania z ograniczeniami dla odzyskiwania hasła.
+- Dodano dynamiczny system cachowania opinii Google.
+- Zrefaktorowano logikę wysyłania e-maili z wykorzystaniem scentralizowanej usługi SMTP.
+- Wprowadzono automatyczne harmonogramowanie trybu konserwacji (maintenance mode).
 
 ## License
 Proprietary / All Rights Reserved.
