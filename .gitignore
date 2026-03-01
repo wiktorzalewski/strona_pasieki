@@ -1,0 +1,13 @@
+# Pasieka Pod Gruszką — .gitignore
+
+# Zaszyfrowany sejf haseł
+hasla.env
+
+# Logi panelu admina
+admin/logs/
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

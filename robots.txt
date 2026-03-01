@@ -1,0 +1,21 @@
+# Robots.txt - Pasieka Pod Gruszką
+# https://pasiekapodgruszka.pl
+
+User-agent: *
+Allow: /
+
+# Blokuj katalogi wewnętrzne
+Disallow: /includes/
+Disallow: /sql/
+Disallow: /tech/
+Disallow: /old_html/
+Disallow: /admin/
+Disallow: /hasla.env
+Disallow: /optimize_images.php
+Disallow: /newsletter.php
+Disallow: /maintenance.php
+Disallow: /maintenance.html
+Disallow: /404.php
+
+# Mapa witryny
+Sitemap: https://pasiekapodgruszka.pl/sitemap.xml

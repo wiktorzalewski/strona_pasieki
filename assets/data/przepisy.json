@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Miodownik Cioci Agnieszki",
+    "author": "Ciocia Agnieszka",
+    "time": "90 min",
+    "content": "Tradycyjne ciasto, które musi odstać swoje. Warstwy miodowe przekładane kremem z kaszy manny. Najlepiej smakuje po 2 dniach."
+  },
+  {
+    "id": 2,
+    "title": "Herbata Zimowa",
+    "author": "Ciocia Agnieszka",
+    "time": "5 min",
+    "content": "Czarna herbata, plaster pomarańczy, goździki i duża łyżka naszego miodu lipowego. Pamiętaj, by dodać miód, gdy herbata nieco przestygnie!"
+  }
+]

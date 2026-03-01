@@ -1,0 +1,13 @@
+[
+  {
+    "id": "spadziowy",
+    "title": "Miód Spadziowy",
+    "price": 55.00,
+    "desc": "Królewski miód o ciemnej barwie.",
+    "details": {
+      "smak": "Żywiczny",
+      "wlasciwosci": "Na odporność",
+      "z_czym": "Do kawy"
+    }
+  }
+]
