@@ -48,10 +48,10 @@ Platforma e-commerce oraz system CMS stworzony od podstaw w PHP dla lokalnej pas
 ## Recent Updates (Marzec 2026)
 - Wdrożono bezpieczny przepływ uwierzytelniania z ograniczeniami dla odzyskiwania hasła.
 - Dodano dynamiczny system cachowania opinii Google.
-- Zrefaktorowano logikę wysyłania e-maili z wykorzystaniem scentralizowanej usługi SMTP.
+- Zmieniono logikę wysyłania e-maili z wykorzystaniem scentralizowanej usługi SMTP.
 - Wprowadzono automatyczne harmonogramowanie trybu konserwacji (maintenance mode).
 
-## icencja
+## Licencja
 **Wszelkie prawa zastrzeżone (All Rights Reserved).**  
 Kod jest udostępniony w celach demonstracyjnych i edukacyjnych (Open Source w zakresie wglądu). Zabrania się kopiowania, modyfikacji oraz redystrybucji kodu bez wyraźnej zgody autora (Wiktor Zalewski).
 
