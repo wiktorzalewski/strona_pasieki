@@ -51,5 +51,7 @@ Platforma e-commerce oraz system CMS stworzony od podstaw w PHP dla lokalnej pas
 - Zrefaktorowano logikę wysyłania e-maili z wykorzystaniem scentralizowanej usługi SMTP.
 - Wprowadzono automatyczne harmonogramowanie trybu konserwacji (maintenance mode).
 
-## License
-Proprietary / All Rights Reserved.
+## icencja
+**Wszelkie prawa zastrzeżone (All Rights Reserved).**  
+Kod jest udostępniony w celach demonstracyjnych i edukacyjnych (Open Source w zakresie wglądu). Zabrania się kopiowania, modyfikacji oraz redystrybucji kodu bez wyraźnej zgody autora (Wiktor Zalewski).
+
